@@ -1,0 +1,18 @@
+#create s3 bucket
+aws s3 mb s3://bucket-name
+#List buckets and objects
+aws s3 ls
+#Move objects
+aws s3 mv s3://bucket-name/example s3://my-bucket/
+#The following example moves a local file from your current working directory to the Amazon S3 bucket with the s3 cp command.
+aws s3 mv filename.txt s3://bucket-name
+#The following example moves a file from your Amazon S3 bucket to your current working directory, where ./ specifies your current working directory.
+aws s3 mv s3://bucket-name/filename.txt ./
+#Copy objects
+aws s3 cp <source> <target> [--options]
+#For a few common options to use with this command, and examples, see Frequently used options for s3 commands. For the complete list of options, see s3 cp in the AWS CLI Command Reference.
+aws s3 cp s3://bucket-name/example s3://my-bucket/
+#The following example copies a local file from your current working directory to the Amazon S3 bucket with the s3 cp command.
+aws s3 cp filename.txt s3://bucket-name
+#The following example copies a file from your Amazon S3 bucket to your current working directory, where ./ specifies your current working directory.
+aws s3 cp s3://bucket-name/filename.txt ./
